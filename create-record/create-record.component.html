@@ -1,0 +1,40 @@
+<div>
+
+
+    <p>CreateNew</p>
+    <form [formGroup]="CreateNewForm" (ngSubmit)="createNew()">
+
+        <div>
+            <input type="date"  placeholder="dateTime" formControlName="dateTime">
+        </div>
+
+
+
+        <div>
+            <input type="number" matInput placeholder="doctorId" formControlName="doctorId">
+        </div>
+
+        <div>
+            <input type="text" matInput placeholder="Name" formControlName="name">
+        </div>
+
+        <div>
+            <input type="number" matInput placeholder="repeatness" formControlName="repeatness">
+        </div>
+
+
+        <div>
+
+            <textarea formControlName="description" placeholder="Description..."></textarea>
+
+        </div>
+
+
+        <div class="button">
+
+            <button type="submit" mat-button [disabled]="!CreateNewForm.valid">Add</button>
+        </div>
+
+    </form>
+
+</div>

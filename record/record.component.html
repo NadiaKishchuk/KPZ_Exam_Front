@@ -1,0 +1,32 @@
+
+ <button type="button" class="btn btn-link" (click)="CreateClick()">CreateNew</button>
+
+ <br>
+
+<table class="table">
+    <thead>
+      <tr>
+ 
+        <th>Name</th>
+        <th>Date</th>
+        <th>Desciption</th>
+        <th>Repeatness</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let record of records">
+
+        <td >{{record.name}}</td>
+        <td >{{record.dateTime | date :'short'}}</td>
+        <td >{{record.description}}</td>
+        <td >{{record.repeatness}}</td>
+        
+        <td >
+            <button  type="button" class="btn btn-link" (click)="DeleteRecord(record.id)">Delete</button>
+            <button  type="button" class="btn btn-link" (click)="EditRecord(record.id)">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+

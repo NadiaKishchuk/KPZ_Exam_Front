@@ -1,0 +1,10 @@
+
+<form [formGroup]="updateForm" (ngSubmit)="update()">
+    <label for="date">NewDate:</label>
+    <input type="date" id="date"  formControlName="newDate" name="date">
+    <div class="button">
+      
+      <button type="submit"  >update</button>
+    </div>
+  </form>
+  
